@@ -1,0 +1,25 @@
+Hi Kaushal,
+
+Thanks for appearing for this coding test. The following test is meant to assess your skills in JavaScript and PHP.
+
+A few things to note before you begin the test,
+There are two questions for each section.
+You will get 3 hours to complete the test.
+Please provide us with the code sample via a private repo of your preferable version control service. For Github our username is “ashokgit”
+Please begin at 12:30 PM and finish by 3:30 PM. I will be online and monitoring the test. If you have any questions, please feel free to call me at 9861774018.
+
+Javascript
+1. Use any Javascript design pattern to create a simple dom based library(similar to Jquery) which will be able to perform following tasks:
+Change the class name of any dom elements
+Get datasets from dom elements
+Inject new dom element
+Make both ajax and get request
+Get and set values from input box/checkbox/select dropdown
+2. Make a 3 POST requests at a same time which needs to be resolve all at a same time
+
+PHP
+1. Use this link to get XML data and convert those data in more readable JSON format . 
+
+2. Create/Architect a PHP class which will receive certain defined inputs and connect to database(does not need to connect to db just create a function for connecting DB), class should include helper functions which can be both internal static and external functions and at last class need to provide some output.
+
+All the best. 
