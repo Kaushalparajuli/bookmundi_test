@@ -39,9 +39,9 @@ function getRequest(link) {
 
 function postRequest(link, postData) {
   this.string = '';
-  for (const j in data) {
+  for (const j in postData) {
     console.log();
-    this.string += j + '=' + data[j] + '&';
+    this.string += j + '=' + postData[j] + '&';
   }
   console.log(this.string);
   this.post_data = this.string;
