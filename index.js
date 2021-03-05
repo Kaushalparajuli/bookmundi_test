@@ -28,7 +28,6 @@ function injectElement(DOMElement, elementName) {
 function getRequest(link) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    return this;
     if (this.readyState == 4 && this.status == 200) {
       return this.responseText;
     }
