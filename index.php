@@ -24,6 +24,21 @@
     <div class="data-set-values">
     </div>
 
+    <!-- getting values fomr input -->
+
+    <div class="form-group">
+        <span>Set Value</span>
+        <input id="set-value" type="text">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <span>Get Value</span>
+        <input id="get-value" style="width:500px" type="text"
+            value="this is used for testing purpose only.check console">
+    </div>
+
 
     <script src="./index.js"></script>
 </body>

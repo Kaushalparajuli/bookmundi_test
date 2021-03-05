@@ -24,6 +24,22 @@ function injectElement(DOMElement, elementName) {
   }
 }
 
+//Get and set value
+function getValue(domElement) {
+  this.element = document.querySelectorAll(domElement);
+  for (let i = 0; i < this.element.length; i++) {
+    this.attr = this.element[i].value;
+    return this.attr;
+  }
+}
+
+function setValue(domElement, input) {
+  this.element = document.querySelectorAll(domElement);
+  for (let i = 0; i < this.element.length; i++) {
+    this.element[i].value = input;
+  }
+}
+
 // Make both ajax and get request
 function getRequest(link) {
   var xhttp = new XMLHttpRequest();
@@ -42,7 +58,6 @@ function postRequest(link, postData) {
     console.log();
     this.string += j + '=' + postData[j] + '&';
   }
-  console.log(this.string);
   this.post_data = this.string;
   this.xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -55,16 +70,38 @@ function postRequest(link, postData) {
   xhttp.send(this.post_data);
 }
 
+async function multipleRequest() {
+  const userProfileData = await Promise.all([
+    postRequest('/xyz.com', {
+      name: 'kaushal',
+      age: 24,
+    }),
+    postRequest('/abc.com', {
+      name: 'kaushal',
+      age: 24,
+    }),
+    postRequest('/hjhj.com', {
+      name: 'kaushal',
+      age: 24,
+    }),
+  ]);
+}
+
 window.onload = () => {
   setTimeout(() => {
     changeClass('h1', 'class', 'alert');
-    getDatasets('.data-sets', 'data-color');
+    console.log(getDatasets('.data-sets', 'data-color'));
     injectElement('.data-set-values', 'p');
-    getRequest('/');
+    setValue('#set-value', 'Hello Bookmundi');
+    console.log(getValue('#get-value'));
+
+    multipleRequest();
+
+    getRequest('/xyz.com?abc=kaushal');
     data = {
       name: 'kaushal',
       age: 24,
     };
-    postRequest('/', data);
-  }, 500);
+    postRequest('/xyz.com', data);
+  }, 2000);
 };

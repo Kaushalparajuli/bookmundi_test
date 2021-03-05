@@ -4,11 +4,11 @@ class Database
 {
     protected $username, $servername, $password;
 
-    public function __construct()
+    public function __construct($servername, $username, $password)
     {
-        $this->servername = "localhost";
-        $this->username = "root";
-        $this->password = "";
+        $this->servername = $servername;
+        $this->username = $username;
+        $this->password = $password;
         $this->connect();
     }
 
